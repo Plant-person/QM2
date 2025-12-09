@@ -1,0 +1,10 @@
+import pandas as pd
+
+df = pd.read_csv('spotify-2023_fixed.csv', encoding='latin1')
+
+most_danceable = df.loc[df['danceability_%'].idxmax()]
+
+print("Song:", most_danceable['track_name'])
+print("Artist:", most_danceable['artist(s)_name'])
+print("Streams:", most_danceable['streams'])
+
